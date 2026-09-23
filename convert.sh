@@ -8,10 +8,10 @@ fi
 
 if [ -n "${VIRTUAL_ENV:-}" ] && [ -x "${VIRTUAL_ENV}/bin/eubi" ]; then
   eubi_cmd="${VIRTUAL_ENV}/bin/eubi"
-elif [ -n "${VIRTUAL_ENV:-}" ] && [ -x "${VIRTUAL_ENV}/Scripts/eubi" ]; then
-  eubi_cmd="${VIRTUAL_ENV}/Scripts/eubi"
 elif [ -n "${VIRTUAL_ENV:-}" ] && [ -x "${VIRTUAL_ENV}/Scripts/eubi.exe" ]; then
   eubi_cmd="${VIRTUAL_ENV}/Scripts/eubi.exe"
+elif [ -n "${VIRTUAL_ENV:-}" ] && [ -x "${VIRTUAL_ENV}/Scripts/eubi" ]; then
+  eubi_cmd="${VIRTUAL_ENV}/Scripts/eubi"
 elif command -v eubi >/dev/null 2>&1; then
   eubi_cmd="$(command -v eubi)"
 else
