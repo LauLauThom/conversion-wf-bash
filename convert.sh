@@ -19,4 +19,4 @@ else
   exit 1
 fi
 
-"$eubi_cmd" "$1" "$2"
+exec "$eubi_cmd" "$1" "$2"
