@@ -15,7 +15,7 @@ elif [ -n "${VIRTUAL_ENV:-}" ] && [ -x "${VIRTUAL_ENV}/Scripts/eubi" ]; then
 elif command -v eubi >/dev/null 2>&1; then
   eubi_cmd="$(command -v eubi)"
 else
-  printf 'eubi command not found on PATH; install requirements.txt in your active environment first.\n' >&2
+  printf 'eubi command not found in the active environment or on PATH; install requirements.txt first.\n' >&2
   exit 1
 fi
 
